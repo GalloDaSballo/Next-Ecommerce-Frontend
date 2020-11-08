@@ -17,7 +17,7 @@ export const AuthProvider = (props) => {
    */
   const loginUser = async (email) => {
     try {
-    //   await magic.auth.loginWithMagicLink({ email });
+      await magic.auth.loginWithMagicLink({ email });
       setUser({ email });
       router.push("/");
     } catch (err) {
@@ -30,7 +30,7 @@ export const AuthProvider = (props) => {
    */
   const logoutUser = async () => {
     try {
-    //   await magic.user.logout();
+      await magic.user.logout();
       setUser(null);
       router.push("/");
     } catch (err) {
@@ -70,7 +70,7 @@ export const AuthProvider = (props) => {
   useEffect(() => {
         magic = new Magic(MAGIC_PUBLIC_KEY)
         
-        // checkUserLoggedIn()
+        checkUserLoggedIn()
   }, []);
 
   return (
