@@ -1,5 +1,8 @@
+import { useContext } from "react";
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import AuthContext from "../context/AuthContext"
+
 
 import styles from '../styles/Header.module.css'
 
@@ -8,10 +11,14 @@ export default () => {
     const router = useRouter()
     const isHome = router.pathname === "/"
 
+    const { user } = useContext(AuthContext);
+
     const goBack = (event) => {
         event.preventDefault()
         router.back()
     }
+
+    
 
     return (
         <div className={styles.nav}>
@@ -28,6 +35,18 @@ export default () => {
                         </h1>
                     </a>
                 </Link>
+            </div>
+
+            <div className={styles.auth}>
+                {user ? (
+                    <Link href="/account">
+                        {user.email}
+                    </Link>
+                ) : (
+                    <Link href="/login">
+                        <a>Log In</a>
+                    </Link>
+                )}
             </div>
 
         </div>
