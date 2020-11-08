@@ -1,5 +1,5 @@
 export const API_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337"
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:1338"
 
 /**
  * Given a image object return the proper path to display it

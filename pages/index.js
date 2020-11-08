@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import products from '../products.json'
 
 import { fromImageToUrl } from '../utils/urls'
+import { twoDecimals } from '../utils/format'
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
                   <img src={fromImageToUrl(product.image)} />
                 </div>
                 <div className={styles.product__Col}>
-                  {product.name} {product.price}
+                  {product.name} ${twoDecimals(product.price)}
                 </div>
               </div>
             </a>
