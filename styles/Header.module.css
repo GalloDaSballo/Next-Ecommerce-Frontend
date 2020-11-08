@@ -21,3 +21,8 @@
     right: 0;
     top: 0;
 }
+
+.auth img {
+    width: 25px;
+    height: 25px;
+}

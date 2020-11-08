@@ -1,0 +1,20 @@
+.input{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+
+.button{
+    font-size: 24px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+
+    margin-bottom: 24px;
+}

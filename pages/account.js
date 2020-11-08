@@ -19,7 +19,8 @@ export default () => {
     return (
         <div>
             <h2>Account Page</h2>
-            <a href="#" onClick={logoutUser}>Logout</a>
+            <p>Logged in as {user.email}</p>
+            <p><a href="#" onClick={logoutUser}>Logout</a></p>
         </div>
     )
 
