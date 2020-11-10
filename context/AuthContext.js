@@ -48,21 +48,27 @@ export const AuthProvider = (props) => {
         if (isLoggedIn) {
             const { email } = await magic.user.getMetadata();
             setUser({ email });
+            //Add this just for test
+            const token = await getToken()
+            console.log("checkUserLoggedIn token", token)
         }
     } catch (err) {
         console.log(err);
     }
   };
 
-//   //Add this last as this is not needed until we need to fetch orders
-//   const getToken = async () => {
-//     try{
-//       const token = await magic.user.getIdToken()
-//       return token
-//     } catch (err) {
-//       console.log(err)
-//     }
-//   }
+  /**
+   * Retrieve Magic Issued Bearer Token
+   * This allows User to make authenticated requests
+   */
+  const getToken = async () => {
+    try{
+      const token = await magic.user.getIdToken()
+      return token
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   /**
    * Reload user login on app refresh
@@ -74,7 +80,7 @@ export const AuthProvider = (props) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, logoutUser, loginUser }}>
+    <AuthContext.Provider value={{ user, logoutUser, loginUser, getToken }}>
       {props.children}
     </AuthContext.Provider>
   );
