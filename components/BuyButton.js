@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { loadStripe } from '@stripe/stripe-js'
-import {API_URL} from '../utils/urls'
+import { API_URL, STRIPE_PK } from '../utils/urls'
 import styles from '../styles/BuyButton.module.css'
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
@@ -31,7 +31,6 @@ export default function BuyButton ({ product }) {
         const result = await stripe.redirectToCheckout({
             sessionId: session.id,
         });
-      
     }
 
     const redirectToLogin = async () => {
