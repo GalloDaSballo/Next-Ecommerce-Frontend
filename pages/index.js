@@ -9,8 +9,8 @@ export default function Home({ products }) {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Build an Ecommerce with NextJS, Magic, Strapi and Stripe</title>
+        <meta name="description" content="Learn how to build a FullStack Ecommerce in this 2 hours and a half free video sponsored by Magic" />
       </Head>
 
       {products.map(product => (
