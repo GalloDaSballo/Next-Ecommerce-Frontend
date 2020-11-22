@@ -5,7 +5,7 @@ import styles from '../styles/BuyButton.module.css'
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 
-const stripePromise = loadStripe('pk_test_N30aQqXtRkyoayWHqMwKkgXC00TG2IO3RN')
+const stripePromise = loadStripe(STRIPE_PK)
 
 export default function BuyButton ({ product }) {
     const { user, getToken } = useContext(AuthContext);
