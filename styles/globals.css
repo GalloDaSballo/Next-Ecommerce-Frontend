@@ -25,3 +25,15 @@ img {
 footer {
   text-align: center;
 }
+
+h1 {
+  max-width: calc(100% - 110px);
+  margin: auto;
+  line-height: 33px;
+}
+
+.img__yt {
+  max-width: 200px;
+  margin-left: 20px;
+  vertical-align: middle;
+}

@@ -9,9 +9,9 @@ export default () => (
         </div>
         <a href="https://www.youtube.com/watch?v=385cpCpGRC0&utm_source=site">
             <h4>
-                Learn to code this on youtube
+                Learn to code this on youtube <img className="img__yt" src="/NextJS.jpg" />
             </h4>
-                <img src="/NextJS.jpg" />
+                
         </a>
     </footer>
 )
